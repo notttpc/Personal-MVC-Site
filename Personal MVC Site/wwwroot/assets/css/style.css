@@ -754,6 +754,10 @@ name title
   background-color: #34b7a7;
 }
 
+#skills .section-title p {
+    color: black;
+}
+
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -917,10 +921,10 @@ name title
   background-color: rgba(127, 137, 161, 0.25);
 }
 
-#services .section-title p {
-  background-color: rgba(127, 137, 161, 0.25);
-  color: #fff;
-}
+    #services .section-title h5 {
+        background-color: rgba(127, 137, 161, 0.25);
+        color: #fff;
+    }
 
 #services .sub-title h1 {
   font-size: 32px;
@@ -1127,7 +1131,9 @@ name title
   opacity: 1;
 }
 .portfolio .section-title p {
-  color: white;
+    color: white;
+    font-size: 20px;
+    
 }
 .portfolio .section-title h2 {
   color: white;
