@@ -1,0 +1,157 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+@section nav {
+    <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+            <li><a class="active" href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="@Url.Action("Resume", "Home")">Resume</a></li>
+            <li><a href="@Url.Action("Portfolio", "Home")">Portfolio</a></li>
+            <li><a href="@Url.Action("Link", "Home")">Centriq</a></li>
+            <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+}
+
+<main id="main">
+    <section id="title" class="title text-center ">
+        <div class="container" data-aos="fade-up">
+            <div class="name-title">
+                <h1>Blake Harrison</h1>
+                <h4>Full Stack-Developer</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="hero">
+
+        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
+
+            <div class="carousel-inner" role="listbox">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active" style="background-image: url(assets/img/Carossel/DSC_1550.jpg)">
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item" style="background-image: url(assets/img/Carossel/DSC_1579.jpg)">
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item" style="background-image: url(assets/img/Carossel/DSC_1695.jpg)">
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#heroCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+            </a>
+
+            <a class="carousel-control-next" href="#heroCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+            </a>
+
+        </div>
+    </section><!-- End Hero -->
+
+    <section id="about" class="about">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>About Me</h2>
+                <p>Up Coming Full-Stack Developer</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <img src="assets/img/About/DSC_1617.jpg" class="img-fluid" alt="">
+                </div>
+                <div class="col-lg-8 pt-4 pt-lg-0 content">
+                    <h3>Developer &amp; Advid Gamer</h3>
+                    <p class="fst-italic">
+
+                    </p>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-rounded-right"></i> <strong>Birthday:</strong> 14 October, 2004</li>
+                                <li><i class="bi bi-rounded-right"></i> <strong>Website:</strong> </li>
+                                <li><i class="bi bi-rounded-right"></i> <strong>Phone:</strong> </li>
+                                <li><i class="bi bi-rounded-right"></i> <strong>City:</strong> Overland Park, Kansas</li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-6">
+                            <ul>
+                                <li><i class="bi bi-rounded-right"></i> <strong>Age:</strong> 19</li>
+                                <li><i class="bi bi-rounded-right"></i> <strong>Degree:</strong> HD</li>
+                                <li><i class="bi bi-rounded-right"></i> <strong>email:</strong></li>
+                                <li><i class="bi bi-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p>
+                        I am a dedicated and ambitious professional with a proven track record of success in guiding teams on the correct path. Over my years of work, I have gained experiences well fit to converse and work with other experienced personnel. I am a fellow nerd who converses in gaming as well. It is one of my past time hobbies wherever coding does not fill. I am eager to bring my skills, experience, and enthusiasm to contribute positively to any team or organization. Thank you for considering my profile.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End About Section -->
+    <!-- ======= Skills Section ======= -->
+    <section id="skills" class="skills">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2>Skills</h2>
+                <p>My skill range from being able to work in a team environment to specific coding languages. Like HTML, CSS, C#, JavaScript, and Data arranging</p>
+            </div>
+
+            <div class="row skills-content">
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">HTML <i class="val">75%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">CSS <i class="val">70%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">JavaScript <i class="val">65%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="progress">
+                        <span class="skill">C# <i class="val">80%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">TEAMWORK <i class="val">100%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+                    <div class="progress">
+                        <span class="skill">GAMING <i class="val">200%</i></span>
+                        <div class="progress-bar-wrap">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Skills Section -->
+</main>

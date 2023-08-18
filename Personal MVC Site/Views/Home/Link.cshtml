@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Centriq";
+}
+
+@section nav {
+    <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+            <li><a  href="@Url.Action("Index", "Home")">Home</a></li>
+            <li><a href="@Url.Action("Resume", "Home")">Resume</a></li>
+            <li><a href="@Url.Action("Portfolio", "Home")">Portfolio</a></li>
+            <li><a class="active" href="@Url.Action("Link", "Home")">Centriq</a></li>
+            <li><a href="@Url.Action("Contact", "Home")">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+}
+
+<main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="container" data-aos="fade-up">
+            <div class="section-title">
+                <h2 class="rounded-2">Centriq Training</h2>
+                <p class="rounded-2">Centriq Training is a comprehensive and specialized educational program designed to equip individuals with practical skills and knowledge in various fields of information technology (IT). This training focuses on preparing participants for successful careers in the rapidly evolving IT industry by offering hands-on experience, industry-relevant certifications, and in-depth understanding of key IT concepts.</p>
+            </div>
+
+            <div class="sub-title text-center">
+                <h1 class="rounded-2">My Centriq Training Classmate</h1>
+            </div>
+            <div style="" class="" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon-box rounded-2" style="">
+                    <div class="icon">
+                        <img src="~/assets/img/Classmates/Mallissa Photo.jpg" class="rounded-2" alt="Melisa Balino" height="200" width="200">
+                    </div>
+                    <h4><a class="text-decoration-underline" href="http://melissabalino.com/index.html">Melissa Balino</a></h4>
+                    <p>Melissa Balino is an up-and-coming<br /> full stack developer. Check her out!</p>
+                </div>
+            </div>
+        </div>
+    </section><!-- End Services Section -->
+</main><!-- End #main -->
