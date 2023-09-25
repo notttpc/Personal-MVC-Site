@@ -1,7 +1,8 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Mvc.TagHelpers
+<!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -27,29 +28,37 @@
     <!-- Template Main CSS File -->
     <link href="~/assets/css/style.css" rel="stylesheet">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
-      <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
 
-        <h1 class="logo me-auto me-lg-0"><a href="index.html">BLAKE HARRISON</a></h1>
-        <!-- Uncomment below if you prefer to use an image logo -->
-        <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            <h1 class="logo me-auto me-lg-0"><a href="index.html">BLAKE HARRISON</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul class="navbar">
+                    <li><a class="" href="@Url.Action("Index", "Home")">Home</a></li>
+                    <li><a class="" href="@Url.Action("Resume", "Home")">Resume</a></li>
+                    <li><a class="" href="@Url.Action("Portfolio", "Home")">Portfolio</a></li>
+                    <li><a class="" href="@Url.Action("Link", "Home")">Centriq</a></li>
+                    <li><a class="" href="@Url.Action("Contact", "Home")">Contact</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
 
-            @RenderSection("nav", required: false)
-            
-        <div class="header-social-links">
-          <a href="https://twitter.com/blake55568727?s=21&t=L28KExip9BhEiPE_cVMkg" class="twitter"><i class="bi bi-twitter h1 m-2"></i></a>
-          <a href="https://www.facebook.com/blake.harrison.792197" class="facebook"><i class="bi bi-facebook h1 m-2"></i></a>
-          <a href="https://instagram.com/blake_m_harrison?igshid=OGQ5ZDc2ODk2ZA==" class="instagram"><i class="bi bi-instagram h1 m-2"></i></a>
-          <a href="https://www.linkedin.com/in/blake-harrison-664491284" class="linkedin"><i class="bi bi-linkedin h1 m-2"></i></i></a>
-          <a href="https://github.com/notttpc" class="github"><i class="bi bi-github h1 m-2"></i></i></a>
+            <div class="header-social-links">
+                <a href="https://twitter.com/blake55568727?s=21&t=L28KExip9BhEiPE_cVMkg" target="_blank" class="twitter"><i class="bi bi-twitter h1 m-2"></i></a>
+                <a href="https://www.facebook.com/blake.harrison.792197" target="_blank" class="facebook"><i class="bi bi-facebook h1 m-2"></i></a>
+                <a href="https://instagram.com/blake_m_harrison?igshid=OGQ5ZDc2ODk2ZA==" target="_blank" class="instagram"><i class="bi bi-instagram h1 m-2"></i></a>
+                <a href="https://www.linkedin.com/in/blake-harrison-664491284" target="_blank" class="linkedin"><i class="bi bi-linkedin h1 m-2"></i></a>
+                <a href="https://github.com/notttpc" target="_blank" class="github"><i class="bi bi-github h1 m-2"></i></a>
+            </div>
+
         </div>
-
-      </div>
 
     </header><!-- End Header -->
 
@@ -57,18 +66,18 @@
 
     <!-- ======= Footer ======= -->
     <footer id="footer">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Blake Harrison</span></strong>. All Rights Reserved
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Blake Harrison</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
         </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
-      </div>
     </footer><!-- End  Footer -->
 
     <div id="preloader"></div>
@@ -82,12 +91,24 @@
     <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
     <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="~/assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="~/assets/jquery/dist/jquery.min.js"></script>
     @*<script src="~/assets/vendor/php-email-form/validate.js"></script>*@
 
     <!-- Template Main JS File -->
     <script src="~/assets/js/main.js"></script>
 
+    <script>
+        $('.navbar li a').each(function () {
+
+            if ($(this).attr('href') == window.location.pathname) {
+
+
+                $(this).addClass('active');
+
+            }
+        });
+    </script>
     @RenderSection("scripts", required: false)
 
-  </body>
+</body>
 </html>
